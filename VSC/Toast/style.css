@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 48px;
+    border-radius: 50px;
+    min-width: 120px;
+    cursor: pointer;
+    transition: opacity .2s linear;
+}
+.btn--size-s {
+    padding: 8px 32px;
+}
+.btn--size-l {
+    padding: 16px 56px;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+.btn + .btn {
+    margin-left: 16px;
+}
+.btn--success {
+    background-color: #71be34;
+}
+
+.btn--warn {
+    background-color: #ffb702;
+}
+
+.btn--danger{ 
+    background-color: #ff623d;
+}
+.btn--disabled{
+    opacity: 0.5 !important;
+    cursor: default;
+}
+body > div {
+    margin: auto;
+}
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+}
+.toast{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    transition: all linear .3s;
+    z-index: 999;
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast--success {
+    background-color:  #b7f7c4;
+}
+
+
+.toast--info {
+    background-color: #b3e6f5 ;
+}
+.toast--warning {
+    background-color:  #fbe7c6;
+}
+.toast--error {
+    background-color:  #ffb7b6;
+}
+
+.toast__icon{
+    font-size: 24px;
+}
+
+.toast__icon ,
+.toast__close {
+    padding: 0 16px;
+}
+.toast + .toast {
+    margin-top: 24px;
+}
+.toast__body{
+    flex-grow: 1;
+}
+
+.toast__title{
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.5;
+}
+
+.toast__msg{
+    font-size: 14px;
+    color: #444;
+    margin-top: 4px;
+}
+
+.toast__close{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.toast__close:hover {
+    opacity: 0.6;
+}
+
